@@ -1,0 +1,40 @@
+<title>OrphyG</title>
+<style type="text/css">
+.style1 {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+.style2 {
+	color: #0066FF;
+}
+.style3 {
+	font-size: x-large;
+	color: #FFFFFF;
+}
+.style4 {
+	font-size: x-large;
+	color: #FFFFFF;
+	background-color: #0066FF;
+}
+
+</style>
+
+<table style="width: 100%; height: 30px">
+	<tr>
+		<td style="height: 30px">
+		<h1 class="style2"><a href="{% url 'home' %}">Gamal Orphy</a></h1>
+ 		</td>
+		<td style="width: 15%; height: 30px" class="style1">
+		<h1 class="style2"><a href="{% url 'admin:index' %}">Admin</a></h1>
+		</td>
+		    <td style="width: 15%; height: 30px" class="style1">
+		    <h1 class="style2"><a href="{% url 'logout' %}">Logout</a></h1>
+		    </td>
+	</tr>
+</table>
+
+<form action="" method="post" class="style4">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit">
+</form>
